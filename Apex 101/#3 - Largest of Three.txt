@@ -1,0 +1,15 @@
+// Given three Integers, return the largest
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+
+    Integer res = 0;
+    if(num1 > num2){
+        if(num1 > num3){
+            res =  num1;
+        }else{
+            res =  num3;
+        }
+    }else if(num2 > num3){
+        res =  num2;
+    }
+    return res;
+}
