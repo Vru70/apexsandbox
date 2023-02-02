@@ -1,0 +1,9 @@
+Given an Integer, return 'even' if the Integer is even, or 'odd' if the Integer is odd. Remember to use the Math.mod function.
+
+evenOrOdd(15) = 'odd'
+
+evenOrOdd(-64) = 'even'
+
+public String evenOrOdd(Integer num) {
+    return math.mod(num,2) == 0 ? 'even' : 'odd';
+}

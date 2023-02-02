@@ -1,0 +1,18 @@
+Some plants are considered companion plants. They grow better when planted next to each other. For the purpose of this problem, we consider the following plants to be companions: lettuce and cucumbers, lettuce and onions, onions and carrots, and onions and tomatoes.
+
+Write a function isCompanion that takes as input two strings plant1 and plant2. If the two plants are companion plants based on the criteria described above, return true. Otherwise, return false.
+
+companionPlants('onions', 'lettuce') = true
+
+companionPlants('lettuce', 'tomatoes') = false
+
+public Boolean companionPlants(String plant1, String plant2) {
+    return      (plant1 == 'onions' && plant2 == 'lettuce')
+            ||  (plant1 == 'lettuce' && plant2 == 'cucumbers')
+            ||  (plant1 == 'onions' && plant2 == 'carrots')
+            ||  (plant1 == 'onions' && plant2 == 'tomatoes')
+            ||  (plant1 == 'lettuce' && plant2 == 'onions')
+            ||  (plant1 == 'cucumbers' && plant2 == 'lettuce')
+            ||  (plant1 == 'carrots' && plant2 == 'onions')
+            ||  (plant1 == 'tomatoes' && plant2 == 'onions') ? true : false;
+}
