@@ -1,0 +1,16 @@
+public String changeTimeFormat(String strTime) {
+    String res;
+    Integer hr = Integer.valueOf(strTime.split(':')[0]);
+    Integer min = Integer.valueOf(strTime.split(':')[1]);
+    if(hr == 0){
+
+        res = '12' + ':' + (min < 10 ? '0' + min : min+'') + ' AM'; 
+    }else if(hr < 12){
+        res = (hr < 10 ? '0' + hr : hr+'') + ':' + (min < 10 ? '0' + min : min+'') + ' AM'; 
+    }else{
+        hr = hr > 12 ? hr - 12 : hr;
+        res = (hr < 10 ? '0' + hr : hr+'') + ':' + (min < 10 ? '0' + min : min+'') + ' PM';
+    }
+
+    return res;
+}
