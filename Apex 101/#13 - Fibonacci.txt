@@ -1,0 +1,16 @@
+public Integer fibonacci(Integer n) {
+
+    Integer cr = 0;
+    Integer nr = 1;
+    if(n == 1 || n == 2){
+        nr =  1;
+    }else{
+        for(Integer i = 1; i < n ; i++){
+            Integer s = nr; 
+            nr = cr + nr ;
+            cr = s;
+        }
+    }
+
+    return nr;
+}
