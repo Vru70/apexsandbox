@@ -1,0 +1,11 @@
+public Id insertStudent(String name, String email) {
+    
+    apxio__Student__c stdObj = new apxio__Student__c();
+    stdObj.Name = name;
+    stdObj.apxio__Email__c = email;
+
+    insert stdObj;
+
+    stdObj = [SELECT ID, Name from apxio__Student__c WHERE Name = : name Limit 1]; 
+    return stdObj.Id;
+} 
